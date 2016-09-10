@@ -1,0 +1,8 @@
+{
+  "firebase": {
+    "serviceAccount": "./config/service-account-credentials.development.json",
+    "apiKey": "AIzaSyDc_6VffffXIkOIQ8SvqWf5N74NEnz7b_k2ESw",
+    "databaseURL": "https://fir-bazaar.firebaseio.com"
+  },
+  "fcmApiKey": "AIzaSyBPEJ7ugjlCVs457jH3LvgN0LZAmxyzlcE"
+}

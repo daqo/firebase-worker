@@ -1,0 +1,4 @@
+{
+  "presets": ["calebmer"],
+  "plugins": ["transform-async-to-generator"]
+}

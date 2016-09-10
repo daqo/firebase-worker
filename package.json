@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "name": "firebase-queue-jobs",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "DEBUG=*,-babel* node -r babel-register ./src/index.js"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "firebase": "^3.2.1",
+    "firebase-queue": "^1.5.0",
+    "node-fetch": "^1.6.0",
+    "node-gcm": "^0.14.4"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.8.0",
+    "babel-preset-calebmer": "^2.0.3",
+    "babel-register": "^6.11.6"
+  }
+}
