@@ -89,7 +89,10 @@ async function messageWorker ({ chatId, messageId, senderDisplayName }) {
         notification: {
           title: senderDisplayName,
           body: message.text,
+          badge: 1,
+          sound: "default"
         },
+        "priority": "high",
       })
 
       // ====================================================================
@@ -129,7 +132,9 @@ async function messageWorker ({ chatId, messageId, senderDisplayName }) {
               { registrationTokens: pushTokens.map(({ token }) => token) },
               (errorCode, data) => {
                 if (errorCode) reject(new Error(`FCM failed and responded with status code ${errorCode}`))
-                else resolve(data)
+                else {
+                  resolve(data)
+                }
               }))
 
         // Destructure the data we get back…
