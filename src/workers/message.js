@@ -87,7 +87,7 @@ async function messageWorker ({ chatId, messageId, senderDisplayName }) {
 
       const fcmMessage = new Message({
         notification: {
-          title: senderDisplayName,
+          title: "Bazaar",
           body: message.text,
           badge: 1,
           sound: "default"
