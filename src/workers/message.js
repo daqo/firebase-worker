@@ -46,7 +46,7 @@ async function messageWorker ({ chatId, messageId, senderDisplayName }) {
   if (!chatID || !messageID)
     throw new Error('Invalid arguments')
 
-  const message = (await db.ref(`messages/${chatID}/${messageID}`).once('value')).val()
+  const message = (await db.ref(`chatMessages/${chatID}/${messageID}`).once('value')).val()
 
   // ========================================================================
   // Get the users who will receive this message.
@@ -61,7 +61,7 @@ async function messageWorker ({ chatId, messageId, senderDisplayName }) {
       // Filter out the users with a falsy value.
       .filter(userID => chatUsers[userID])
       // Filter out the sender.
-      .filter(userID => userID !== message.sender)
+      // .filter(userID => userID !== message.sender)
 
   // ========================================================================
   // Do some stuff in parallel.

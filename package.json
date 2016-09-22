@@ -1,11 +1,18 @@
 {
   "private": true,
-  "name": "firebase-queue-jobs",
+  "name": "firebase-queue-pokemon-chats",
   "version": "0.0.1",
   "scripts": {
-    "start": "DEBUG=*,-babel* node -r babel-register ./src/index.js"
+    "start": "node -r babel-register ./src/index.js",
+    "staging": "npm start",
+    "production": "npm start"
   },
   "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.14.0",
+    "babel-register": "^6.11.6",
+    "babel-plugin-transform-async-to-generator": "^6.8.0",
+    "babel-preset-calebmer": "^2.0.3",
     "debug": "^2.2.0",
     "firebase": "^3.2.1",
     "firebase-queue": "^1.5.0",

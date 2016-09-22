@@ -14,7 +14,7 @@ const messageQueue = new Queue(
 
 // Intercept termination signal so that we can shutdown our queues and prevent
 // wierd states from happening.
-process.on('SIGINT', () => {
+process.on('SIGTERM', () => {
   debug('Starting queue shutdown')
   Promise.all([
     messageQueue.shutdown(),
